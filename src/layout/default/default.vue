@@ -1,0 +1,31 @@
+<template>
+    <div class="Default">
+        <Top/>
+        <div class="Default-main">
+            <Side/>
+            <main class="table-ceil">
+                <slot />
+            </main>
+        </div>
+    </div>
+</template>
+
+<script>
+import Side from './components/side'
+import Top from './components/top'
+export default {
+    components: {Side, Top}
+}
+</script>
+
+<style scoped>
+.Default-main{
+    width: 100%;
+    display: table;
+}
+    .table-ceil{
+        display: table-cell;
+        vertical-align:top;
+    }
+
+</style>
