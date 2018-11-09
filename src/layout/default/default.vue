@@ -4,7 +4,9 @@
         <div class="Default-main">
             <Side/>
             <main class="table-ceil">
-                <slot />
+                <transition name="fade-transform" mode="out-in">
+                    <router-view/>
+                </transition>
             </main>
         </div>
     </div>

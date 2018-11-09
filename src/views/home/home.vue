@@ -1,20 +1,17 @@
 <template>
-    <Default>
-        <div class="Home">
-            <div class="Home-ti"> i am main </div>
-            <HelloWorld/>
-        </div>
-    </Default>
+    <section class="Home">
+        <div class="Home-ti"> i am main </div>
+        <HelloWorld/>
+    </section>
 </template>
 
 <script>
-import Default from '@/layout/default/default.vue'
 
 import HelloWorld from '@/components/hello-world/hello-world'
 
 export default {
     components: {
-        Default, HelloWorld
+        HelloWorld
     }
 }
 </script>

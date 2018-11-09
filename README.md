@@ -13,7 +13,7 @@ architecture-demo
     + component-a
         + img 组件图片资源
         + component-a.vue 组件代码
-
++ 路由第一层是layout 第二层才是组件
 
 
 # 缺:
