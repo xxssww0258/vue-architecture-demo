@@ -42,4 +42,8 @@ export const routes = [
     { path: '*', hidden: true, component: HeaderMain, children: [{ path: '', component: NotFound }] }
 ]
 
-export default new Router({ routes })
+export default new Router({
+    // mode: 'history', //后端支持可开
+    scrollBehavior: () => ({ y: 0 }),
+    routes
+})

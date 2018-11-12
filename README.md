@@ -24,6 +24,4 @@ architecture-demo
     + fn-util 自定义工具
 
 # 缺:
-+ 动画
-+ 另一个layout
-+ svg文件
++ icons
