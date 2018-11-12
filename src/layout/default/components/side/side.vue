@@ -3,9 +3,9 @@
         <ul>
             <router-link
                 tag="li" class="DefaultSide-1" :to="{path:route.path}"
-                v-for="route in routeTable" :key="route.name" v-if="route.meta.show"
+                v-for="route in routeTable" :key="route.name" v-if="route.meta&&route.meta.show"
             >
-                {{ route.meta.title }}
+                {{ route.meta&&route.meta.title }}
             </router-link>
         </ul>
     </aside>
@@ -39,6 +39,7 @@ export default {
     z-index: 1;
 }
     .DefaultSide-1{
+        cursor: pointer;
         background: skyblue;
         line-height: 20px;
         text-align: center;

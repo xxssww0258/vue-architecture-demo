@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Side from './components/side'
-import Top from './components/top'
+import Side from './components/side/side'
+import Top from '../components/top/top'
 export default {
     components: {Side, Top}
 }
@@ -26,6 +26,7 @@ export default {
     display: table;
 }
     .table-ceil{
+        background: green;
         display: table-cell;
         vertical-align:top;
     }

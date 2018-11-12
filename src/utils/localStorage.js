@@ -1,5 +1,5 @@
 // import storageObj from './utils/localStorage'
-
+// sessionStorage 就直接用 vuex 代替就好了
 const storage = {
     lang      : '语言种类',
     userInfo  : '用户信息',

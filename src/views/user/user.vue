@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import UserDetail from './components/user-detail'
+import UserDetail from './components/user-detail/user-detail'
 export default {
     components: {
         UserDetail

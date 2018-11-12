@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .DefaultTop{
+    line-height: 80px;
     text-align: center;
     background: gray;
 }

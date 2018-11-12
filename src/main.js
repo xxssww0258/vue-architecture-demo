@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 import 'html5-reset/assets/css/reset.css' // 样式重置
-import './assets/vue-transition.css'
+import './style/vue-transition.css'
 
 import './mock' // mock数据
 Vue.config.productionTip = true

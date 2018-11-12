@@ -11,6 +11,6 @@ module.exports = {
                  "git add"
              ]
          },
-         "ignore": ["**/dist/*.min.js"]
+         "ignore": ["**/dist/*","**/static/*"]
      }
 }

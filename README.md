@@ -14,7 +14,14 @@ architecture-demo
         + img 组件图片资源
         + component-a.vue 组件代码
 + 路由第一层是layout 第二层才是组件
-
++ vuex
++ filter.js
++ 404
++ navigation-guard.js 路由守卫
++ utils
+    + env 环境判断
+    + localStorage
+    + fn-util 自定义工具
 
 # 缺:
 + 动画
