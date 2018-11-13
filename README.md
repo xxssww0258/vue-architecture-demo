@@ -25,3 +25,5 @@ architecture-demo
 
 # 缺:
 + icons
++ vue-template
++ 多页面选项
