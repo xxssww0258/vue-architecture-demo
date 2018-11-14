@@ -18,6 +18,8 @@ architecture-demo
 + filter.js
 + 404
 + navigation-guard.js 路由守卫
++ router
+    + demoRoute 用来查看全部组件和视图组件  直观的查看到各个组件
 + utils
     + env 环境判断
     + localStorage
@@ -27,3 +29,10 @@ architecture-demo
 + icons
 + vue-template
 + 多页面选项
++ nested 折叠的side
++ 重定向组件
++ toTop
++ 主题
+
++ guide
++clipboard
