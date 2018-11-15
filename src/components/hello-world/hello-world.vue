@@ -1,5 +1,6 @@
 <template>
-    <section class="hello">
+    <section class="hello" v-guide.close="guide">
+        显示guide:{{ guide }}
         <div>
             <img src="./img/logo.png" alt=""/>
         </div>
@@ -16,6 +17,7 @@ export default {
     name: 'HelloWorld',
     data () {
         return {
+            guide : false,
             // 事件 把该组件所有的emit事件统一写在这 方便查阅
             events: {
                 click: this.$emit.bind(this, 'click'),

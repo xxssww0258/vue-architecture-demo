@@ -2026,6 +2026,10 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+driver.js@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/driver.js/-/driver.js-0.8.1.tgz#e356e314dcfb56c5c369f34121075ac9f063cc2b"
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "http://registry.npmjs.org/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
