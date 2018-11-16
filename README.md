@@ -31,16 +31,19 @@ architecture-demo
     + guide 只单纯的封装了一个modal效果
 + mixin
     + toTop
++ icons
+    + fons-awesome
+    + customize-icons
 
 
 # 缺:
-+ icons
 + vue-template
 + 多页面选项
 + nested 折叠的side
-+ 主题
 
-+ clipboard
++ clipboard 配合 icons 做开发页组件
 
-+ download-git-repo
-+ inxxxx 的命令行
++ 脚手架
+    + 插入svg-sprite-loader webpack配置
+    + download-git-repo
+    + in** 命令行

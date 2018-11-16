@@ -7,10 +7,8 @@ const webAxios = axios.create({
         return status >= 200 && status < 300 // 默认的  根据后台处理
     },
     headers: {
-        common: {
-            Authorization: AUTH_TOKEN
-        },
-        post: {
+        Authorization: AUTH_TOKEN,
+        post         : {
             'Content-Type': 'application/json' // java 后台一般用这个
         }
     }

@@ -1,6 +1,7 @@
 <template>
     <section class="hello" v-guide.close="guide">
         显示guide:{{ guide }}
+        <v-icon name="signal"/>
         <div>
             <img src="./img/logo.png" alt=""/>
         </div>

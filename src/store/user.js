@@ -1,5 +1,5 @@
-import { loginAjax, userInfoAjax } from '@/api/bs/user' // eslint-disable-line
-import storage from '@/utils/localStorage'
+import { loginAjax, userInfoAjax } from '../api/user' // eslint-disable-line
+import storage from '../utils/localStorage'
 const user = {
     namespaced: true,
     state     : {
