@@ -1,4 +1,5 @@
 # vue-architecture-demo
+> 参考vue-element-admin 移除了element
 architecture-demo
 + 自定义eslint
 + 添加lint-staged husky 做提交规范
@@ -35,15 +36,23 @@ architecture-demo
     + fons-awesome
     + customize-icons
 
-
 # 缺:
-+ vue-template
-+ 多页面选项
-+ nested 折叠的side
-
 + clipboard 配合 icons 做开发页组件
 
+# 需要手动添加的
++ package.json
+    + `yarn add axios cross-env driver.js eslint-formatter-friendly fastclick html5-reset husky lint-staged mockjs vue-awesome vue-i18n vuex`
 + 脚手架
     + 插入svg-sprite-loader webpack配置
-    + download-git-repo
-    + in** 命令行
+    ```js
+        rules:[
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader',
+                include: [resolve('src/icons')],
+                options: {
+                    symbolId: 'icon-[name]'
+                }
+            },
+        ]
+    ```

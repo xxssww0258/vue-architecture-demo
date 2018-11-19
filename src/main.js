@@ -19,8 +19,6 @@ import './mixins' // 混合
 import './mock' // mock数据
 // import './fastclick' // 解决移动端某些浏览器的点击延迟延迟
 
-Vue.config.productionTip = true
-
 /* eslint-disable no-new */
 const vm = new Vue({
     el    : '#app',
@@ -30,5 +28,8 @@ const vm = new Vue({
     render: h => h(App)
 })
 
-console.log(vm)
-console.log(process.env)
+if (process.env.NODE_ENV !== 'production') {
+    Vue.config.productionTip = true
+    console.log(vm)
+    console.log(process.env)
+}

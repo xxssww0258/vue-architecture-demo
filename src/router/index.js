@@ -45,20 +45,23 @@ export const routes = [
 
 // ======================================== 这是方便开发调试展示所有component和views ========================================
 /*eslint-disable*/ 
-let requireAll = (r,pathPrefix) => r.keys().map(componentPath => {
-    // 筛选出 第一层路径
-    if( componentPath.indexOf('/',2) !== componentPath.lastIndexOf('/') ){ return }
-    return {
-        path     : resolve(pathPrefix,componentPath),
-        component: Default,
-        meta     : {
-            title: resolve(pathPrefix,componentPath),
-            show : true, // 控制是否在side上显示隐藏
-            roles: []// 哪些身份的人才可以登陆
-        },
-        children: [{ path: '/', component: r(componentPath).default }]
-    }
-})
+let requireAll = 
+    process.env.NODE_ENV === 'production'
+    ?{}
+    :(r,pathPrefix) => r.keys().map(componentPath => {
+        // 筛选出 第一层路径
+        if( componentPath.indexOf('/',2) !== componentPath.lastIndexOf('/') ){ return }
+        return {
+            path     : resolve(pathPrefix,componentPath),
+            component: Default,
+            meta     : {
+                title: resolve(pathPrefix,componentPath),
+                show : true, // 控制是否在side上显示隐藏
+                roles: []// 哪些身份的人才可以登陆
+            },
+            children: [{ path: '/', component: r(componentPath).default }]
+        }
+    })
 
 let reqComponents = require.context('../components/', true, /\.vue$/) // 第二个参数是 是否深度递归
 let reqViews = require.context('../views/', true, /\.vue$/)
