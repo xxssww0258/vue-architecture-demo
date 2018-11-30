@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 // 仅引入用到的图标以减小打包体积
 // import 'vue-awesome/icons/flag'
+// http://www.bootcss.com/p/font-awesome/#icons-web-app
 
 // 或者在不关心打包体积时一次引入全部图标
 import 'vue-awesome/icons'

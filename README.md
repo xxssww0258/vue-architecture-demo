@@ -38,6 +38,8 @@ architecture-demo
 
 # 缺:
 + clipboard 配合 icons 做开发页组件
++ 加入element
++ 加入vux
 
 # 需要手动添加的
 + package.json
