@@ -1,4 +1,4 @@
-import {resolve} from 'path'
+import {join} from 'path'
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home/home'
@@ -47,15 +47,15 @@ export const routes = [
 /*eslint-disable*/ 
 let requireAll = 
     process.env.NODE_ENV === 'production'
-    ?{}
+    ?()=>{return []}
     :(r,pathPrefix) => r.keys().map(componentPath => {
         // 筛选出 第一层路径
         if( componentPath.indexOf('/',2) !== componentPath.lastIndexOf('/') ){ return }
         return {
-            path     : resolve(pathPrefix,componentPath),
+            path     : join(pathPrefix,componentPath),
             component: Default,
             meta     : {
-                title: resolve(pathPrefix,componentPath),
+                title: join(pathPrefix,componentPath),
                 show : true, // 控制是否在side上显示隐藏
                 roles: []// 哪些身份的人才可以登陆
             },
