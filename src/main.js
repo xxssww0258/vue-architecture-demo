@@ -16,6 +16,7 @@ import './filter'// 常用过滤
 import './directive'// 常用指令
 import './event-bus'// 事件巴士
 import './mixins' // 混合
+import './middleware' // 中间件
 import './mock' // mock数据
 // import './fastclick' // 解决移动端某些浏览器的点击延迟延迟
 
