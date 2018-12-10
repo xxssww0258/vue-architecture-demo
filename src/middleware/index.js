@@ -6,8 +6,16 @@ Vue.mixin({
     }
 })
 
-// 个别的中间件使用
-// import middleware from '@/middleware'
-// export default {
-//     beforeCreate:middleware.xxx
-// }
+/**
+ * 个别的中间件使用demo
+ * @export hello
+ * @param {*} params
+ * @example
+ * import middleware from '@/middleware'
+ * export default {
+ *  beforeCreate:middleware.hello
+ * }
+ */
+export function hello (params) {
+    console.log('hello, i am the middleware')
+}

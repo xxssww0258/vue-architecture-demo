@@ -9,6 +9,10 @@ Vue.directive('guide', {
             allowClose: binding.modifiers && !binding.modifiers.close,
             onDeselected (el) {
                 // 考虑这里引入事件巴士
+            },
+            onReset (el) { // 执行修改外部的 可能会导致外部bug
+                let { expression } = binding;
+                (vnode.context[expression] !== undefined) && (vnode.context[expression] = false) // 排出掉一些奇怪的表达式
             }
         })
     },

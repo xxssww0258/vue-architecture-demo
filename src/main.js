@@ -10,8 +10,7 @@ import './styles/index.css'
 
 // 可选
 import i18n from './lang' // i18n
-import './icons/vue-awesome' // font awesome
-import './icons/customize-icons' // 自定义svg-icon
+import './icons' // 自定义svg-icon  和 font awesome
 import './filter'// 常用过滤
 import './directive'// 常用指令
 import './event-bus'// 事件巴士
