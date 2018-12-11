@@ -27,7 +27,7 @@ architecture-demo
     + localStorage
     + fn-util 自定义工具
 + filter.js
-    + formatDate
+    + dateFormat
 + directive
     + guide 只单纯的封装了一个modal效果
 + mixin
