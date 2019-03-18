@@ -35,6 +35,7 @@ architecture-demo
 + icons
     + fons-awesome
     + customize-icons
++ template 复制流开发者所需模板
 
 # 缺:
 + clipboard 配合 icons 做开发页组件

@@ -9,6 +9,8 @@ import HeaderMain from '@/layout/header-main/header-main.vue'
 import NotFound from '@/views/404/404.vue'
 import Reload from '@/views/reload/reload.vue'
 
+import navGuard from './navigation-guard'
+
 Vue.use(Router)
 // ======================================== 这是正常的路由 ========================================
 export const routes = [
@@ -16,7 +18,7 @@ export const routes = [
         path     : '/',
         name     : 'Home',
         component: Default,
-        meta     : {
+        meta     : { // 自定义参数,外部是 vue-router 的路由参数
             title: '首页',
             show : true, // 控制是否在side上显示隐藏
             roles: []// 哪些身份的人才可以登陆
@@ -72,9 +74,8 @@ const demoRoute = [
 ]
 
 
-// ======================================== 导出 ========================================
-
-export default new Router({
+// ======================================== 初始化 ========================================
+const router =  new Router({
     // mode: 'history', //后端支持可开
     scrollBehavior: () => ({ y: 0 }),
     routes        : [
@@ -84,3 +85,9 @@ export default new Router({
         { path: '*', hidden: true, component: HeaderMain, children: [{ path: '', component: NotFound }] }
     ]
 })
+
+// ---------------------------------------- 添加路由守卫 ----------------------------------------
+navGuard(router)
+
+// ---------------------------------------- 导出 ----------------------------------------
+export default router

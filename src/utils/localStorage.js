@@ -1,12 +1,11 @@
 // import storageObj from './utils/localStorage'
 // sessionStorage 就直接用 vuex 代替就好了
 const storage = {
-    lang      : '语言种类',
-    userInfo  : '用户信息',
-    token     : '用户登陆token',
-    curAccount: '当前选中的公司',
-    remove    : key => localStorage.removeItem(key),
-    removeAll : () => Object.keys(storage).map(key => localStorage.removeItem(key))
+    lang     : '语言种类',
+    userInfo : '用户信息',
+    token    : '用户登陆token',
+    remove   : key => localStorage.removeItem(key),
+    removeAll: () => Object.keys(storage).map(key => localStorage.removeItem(key))
 }
 Object.preventExtensions(storage)
 Object.getOwnPropertyNames(storage).map(key => {

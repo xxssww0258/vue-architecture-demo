@@ -6,8 +6,7 @@ const user = {
         isUpdateUserInfo: true,
         avatar          : '',
         roles           : [],
-        userInfo        : storage.userInfo, // 同步化localStorage 但是key必须一致
-        curAccount      : storage.curAccount
+        userInfo        : storage.userInfo // 同步化localStorage 但是key必须一致
     },
     mutations: {
         UPDATE: (state, { key, value }) => {
@@ -28,7 +27,6 @@ const user = {
         Login ({ commit }, params) {
             return loginAjax(params)
                 .then(data => {
-                    commit('UPDATE', { key: 'curAccount', value: data.account[0] })
                     commit('UPDATE', { key: 'userInfo', value: data })
                     commit('UPDATE', { key: 'token', value: data.userToken })
                     return data
@@ -47,7 +45,6 @@ const user = {
         FedLogOut ({ commit }) {
             storage.remove('token')
             storage.remove('userInfo')
-            storage.remove('curAccount')
             return Promise.resolve()
         }
     }

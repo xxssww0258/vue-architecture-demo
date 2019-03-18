@@ -16,7 +16,7 @@ import './directive'// 常用指令
 import './event-bus'// 事件巴士
 import './mixins' // 混合
 import './middleware' // 中间件
-import './mock' // mock数据
+import './mock' // mock数据  其实没啥必要 后端接口开发速度 一般都比前端快
 // import './fastclick' // 解决移动端某些浏览器的点击延迟延迟
 
 /* eslint-disable no-new */
