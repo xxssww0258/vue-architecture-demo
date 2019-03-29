@@ -1,19 +1,19 @@
 // 和mixins 有区别 这里主要时用来挂载 一些逻辑 但是我目前想不到有什么用
-import Vue from 'vue'
-Vue.mixin({
+export const viewMixins = {
     beforeCreate () {
         // 全局中间件
+        hello()
     }
-})
+}
 
 /**
- * 个别的中间件使用demo
+ * 每一个views 组件都要引入的中间件 mixins
  * @export hello
  * @param {*} params
  * @example
  * import middleware from '@/middleware'
  * export default {
- *  beforeCreate:middleware.hello
+ *  mixin:[viewMixins]
  * }
  */
 export function hello (params) {
