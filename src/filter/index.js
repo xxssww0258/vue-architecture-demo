@@ -1,8 +1,13 @@
 import Vue from 'vue'
-import {relativeDate} from './utils'
+import moment from 'moment'
 import dateFormat from 'dateformat' // https://github.com/felixge/node-dateformat
-//  输入格式 格式化时间
-// dateFormat(Date.now(), "dddd, mmmm dS, yyyy, h:MM:ss TT"
-// Date.now() | dateFormat('yyyy-mm-dd HH:MM:ss')
+
+import { defaultFormat } from './dateConfig'
+import dateFormat from './dateFormat'
+import relativeDate from './relativeDate'
+
+moment.defaultFormat = defaultFormat
+
+// PENDING : 单纯拿moment来 太过浪费 这个包占到 一百多KB没经过优化的500多KB dateformat只要几KB
 Vue.filter('dateFormat', dateFormat)
 Vue.filter('relativeDate', relativeDate)

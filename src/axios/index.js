@@ -22,7 +22,7 @@ newAxios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
     return config
 }, function (error) {
-    // 对请求错误做些什么
+    // 对请求错误做些什么, 这里会得到 请求超时之类的
     return Promise.reject(error)
 })
 
@@ -30,7 +30,7 @@ newAxios.interceptors.request.use(function (config) {
 newAxios.interceptors.response.use(function (response) {
     let data = response.data
     // 这里用来统一 不同的后端返回的数据类型
-    // 有些后端喜欢返回错 data.errCode  有些喜欢返回 http.status
+    // 因为后端喜欢用200来返回数据 所以这里用来统一后端处理结果 有些后端喜欢用 data.errCode  有些喜欢返回 http.status
     if (data.isSuccess === 1) { return Promise.reject(Error('error')) }
 
     return data //  改写  data 后就能直接通过 response 获取data了

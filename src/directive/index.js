@@ -6,6 +6,7 @@ Vue.directive('guide', {
     // ：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
     bind (el, binding, vnode, oldVnode) {
         el.driver = new Driver({
+            // 修饰符是否带 close 字段
             allowClose: binding.modifiers && !binding.modifiers.close,
             onDeselected (el) {
                 // 考虑这里引入事件巴士
