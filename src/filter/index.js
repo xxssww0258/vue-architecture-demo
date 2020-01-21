@@ -2,7 +2,7 @@ import Vue from 'vue'
 import moment from 'moment'
 import dateFormat from 'dateformat' // https://github.com/felixge/node-dateformat
 
-import { defaultFormat } from './dateConfig'
+import { defaultFormat } from '../config.js'
 import dateFormat from './dateFormat'
 import relativeDate from './relativeDate'
 

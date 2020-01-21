@@ -1,7 +1,7 @@
 // ======================================== date-filter ========================================
 // import dateFormat from 'dateformat' // https://github.com/felixge/node-dateformat
 import moment from 'moment'
-import { relativeFormat } from './dateConfig'
+import { relativeFormat } from '../config.js'
 
 /** 格式相对化时间 */
 export default function relativeDate(time, option = relativeFormat) {

@@ -1,4 +1,5 @@
 // 和mixins 有区别 这里主要时用来挂载 一些逻辑 但是我目前想不到有什么用
+// 目前看来这个是没有用途的
 export const viewMixins = {
     beforeCreate () {
         // 全局中间件

@@ -36,4 +36,10 @@ Object.getOwnPropertyNames(storage).map(key => {
 
     })
 })
+// 初始化部分参数
+function initValue(storage){
+    // FIXME: navigator.language 得到的是中划线 不是下划线
+    storage.lang = window.navigator.language || 'zh-CN'
+}
+initValue(storage)
 export default storage
